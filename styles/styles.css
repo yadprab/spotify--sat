@@ -150,7 +150,7 @@ footer {
   display: grid;
   -ms-grid-columns: (50px)[4];
       grid-template-columns: repeat(4, 50px);
-  gap: 1.5rem;
+  gap: 40px;
   place-content: center;
 }
 
