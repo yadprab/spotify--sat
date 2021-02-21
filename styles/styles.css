@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap");
+:root {
+  --baseGreen:#0D5928;
+  --loader:#2B9F57;
+  --loaderBg:#196532;
+  --bg:#121212;
+  --grey:#282828;
+  --grey2:#6A6A6A;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+svg {
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+header .top--section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100px 1fr;
+      grid-template-columns: 100px 1fr;
+  align-self: flex-start;
+  background-color: var(--bg);
+  width: 100%;
+  padding: 1em;
+}
+
+header .top--section h1 {
+  color: var(--grey2);
+  font-size: 2rem;
+}
+
+header .top--section h2 {
+  color: #fff;
+  font-size: 2rem;
+}
+
+header .bottom--section {
+  padding: 1em;
+  background-color: var(--bg);
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  color: var(--grey2);
+}
+
+header .bottom--section p {
+  font-size: 1rem;
+}
+
+header .bottom--section p:nth-child(1) {
+  position: relative;
+  color: #fff;
+}
+
+header .bottom--section p:nth-child(1)::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 65px;
+  border-bottom: 3px solid var(--loader);
+}
+
+main {
+  background-color: var(--bg);
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+main .spinner {
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+
+main .spinner::after {
+  position: absolute;
+  content: '';
+  width: inherit;
+  height: inherit;
+  border: 6px solid var(--loaderBg);
+  border-radius: 50%;
+  border-top-color: var(--loader);
+  -webkit-animation: spinner 2s  linear infinite;
+          animation: spinner 2s  linear infinite;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  background-color: var(--grey);
+  padding: 1em;
+  right: 0;
+  left: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (50px)[4];
+      grid-template-columns: repeat(4, 50px);
+  gap: 1.5rem;
+  place-content: center;
+}
+
+footer #high {
+  color: #fff;
+}
+
+footer button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  background-color: unset;
+  color: var(--grey2);
+}
+
+footer button svg {
+  fill: var(--grey2);
+}
+
+@-webkit-keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=styles.css.map */
